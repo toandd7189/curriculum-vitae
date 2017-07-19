@@ -1,0 +1,60 @@
+/**
+* $JA#COPYRIGHT$
+*/
+// RTL STYLES
+// ------------------------------------------------------
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 @grid-gutter-width @t3-global-margin 0;
+  }
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 0 @t3-global-margin @grid-gutter-width;
+  }
+}
+
+// Section Title
+.t3-features-intro .section-title > h2 {
+	transform: rotate(-90deg);
+}
+
+// EasyBlog
+// ----------------------------
+
+.com_easyblog {
+	div#eb .eb-posts .ja-masonry-wrap .eb-post-featured span {
+		transform: rotate(-45deg);
+	}
+}
+
+
+// Modules
+// ------------------------
+
+// Login Module
+#login-form {
+	.fa-arrow-right:before {
+		content: "\f060";
+		font-family: "FontAwesome";
+	}
+}
+
+// Categories module
+.categories-module, ul.categories-module,
+.category-module, ul.category-module,
+.latestnews, ul.latestnews {
+  margin: 0;
+
+  li:before {
+      content:"\f104";
+    }
+}

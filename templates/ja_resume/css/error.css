@@ -1,0 +1,130 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+/* MAIN STYLE
+---------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.625;
+	margin: 0;
+}
+
+/* OutLine */
+#outline {
+	margin-top: 7%;
+	text-align: center;
+}
+
+/* Eror Code */
+.error-code {
+	color: #000;
+	font-size: 200px;
+	font-weight: 700;
+	line-height: normal;
+	position: relative;
+	margin-bottom: 20px;
+	letter-spacing: -10px;
+	font-family: 'Bitter', serif;
+}
+
+
+/* Message Error */
+.error-message {
+}
+
+/* Message Error */
+.error-message h2 {
+	color: #222222;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    margin-top: 0;
+    padding: 20px 0;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.error-message h2 span {
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+.error-message h2:before {
+    border: 4px solid #fc615d;
+    bottom: 0;
+    content: "";
+    height: 96px;
+    left: 50%;
+    margin-left: -48px;
+    position: absolute;
+    width: 96px;
+}
+
+#errorboxbody p {
+	color: #444;
+	display: block;
+	margin: 0 0 30px;
+	font-family: 'Bitter', serif;
+}
+
+/* Button Home */
+.button-home {
+	background: #000;
+	border: 4px solid #000;
+	color: #fff;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 30px;
+	font-family: sans-serif;
+	position: relative;
+	font-size: 13px;
+	transition: 0.3s;
+}
+
+.button-home:hover,
+.button-home:focus,
+.button-home:active {
+	background: #fff;
+	color: #000;
+}
+
+@media (max-width:  360px){
+
+	/* OutLine */
+	#outline {
+		margin-top: 20%;
+	}
+
+	/* Eror Code */
+	.error-code {
+	  font-size: 150px;
+	}
+
+	/* Message Error */
+	.error-message {
+	}
+
+	/* Message Error */
+	.error-message h2 {
+	  font-size: 24px;
+	}
+}

@@ -1,0 +1,53 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+
+// HEADER
+// ---------------------------------------------------------
+.logo-text {  
+  a {
+    border-radius: 50%;
+    text-align: center;
+
+    span {
+      top: 50%;
+      right: 0;
+      bottom: auto;
+      display: inline-block;
+      width: 100%;
+      transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+  }
+}
+
+
+//
+// MODULE TITLE DECOR
+// ---------------------------------------------------------
+.acm-title {
+  color: @brand-primary;
+  span {
+    background: transparent;
+  }
+
+  // Title Style 1
+  .title-style-1 & {
+    &:before {
+      border-radius: 50%;
+      background: @brand-primary;
+      bottom: -5px;
+      .opacity(0.2);
+    }
+  }
+
+  // Title Style 2
+  .title-style-2 & {
+    &:before {    
+      border-radius: 50%;
+      background: @brand-primary;
+      .opacity(0.2);
+    }
+  }
+}

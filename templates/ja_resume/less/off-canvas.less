@@ -1,0 +1,398 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  right: @grid-gutter-width;
+  top: @t3-global-margin;
+  letter-spacing: normal;
+  width: auto;
+  .transition(all 400ms);
+
+  // Medium desktop view
+  @media (max-width: 1300px) {
+    position: static;
+    float: right;
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .patty {
+    background-color: @gray-dark;
+    height: 1px;
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    .transition(all 0.3s ease 0s);
+
+    &:before,
+    &:after {
+      background: @gray-dark;
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      width: 16px;
+      .transition(all 0.3s ease 0s);
+    }
+
+    &:after {
+      top: 6px;
+    }
+
+    &:before {
+      top: -6px;
+    }
+  }
+
+  &:hover {
+    .patty {
+      background: @brand-primary;
+
+      &:after {
+        top: 6px;
+        background: @brand-primary;
+      }
+
+      &:before {
+        top: -6px;
+        background: @brand-primary;
+      }
+    }
+  }
+}
+
+// Header Style Black
+.t3-header.style-dark {
+  .off-canvas-toggle {
+    .patty {
+      &,&:before,&:after {
+        background: @white;
+      }
+    }
+
+    &:hover {
+      .patty {
+        &,&:before,&:after {
+          background: @brand-primary;
+        }
+      }
+    }
+  }
+
+  .off-canvas-open & {
+    .off-canvas-toggle {
+      .patty {
+        background: transparent;
+
+        &:before,&:after {
+          background: @brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.off-canvas-open {
+  .t3-wrapper:after {
+    z-index: @zindex-popover;
+  }
+
+  .off-canvas-toggle {
+    .patty {
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        background: @brand-primary;
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+
+      &:before {
+        top: 0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      &:hover {
+        &:after {
+          top: 0;
+        }
+
+        &:before {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+  // Generic
+  // -----------------------------------
+  background: @t3-off-canvas-background;
+  color: @t3-off-canvas-text-color;
+
+  @media (max-width: @screen-xs-max) {
+    width: 270px;
+  }
+
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: @t3-off-canvas-header-background;
+    color: @t3-off-canvas-header-text-color;
+    padding: 0 0 0 @t3-global-padding;
+    height: 50px;
+
+    // Title
+    h2 {
+      margin: 0;
+      font-size: @t3-font-size-small;
+      font-weight: @font-weight-normal;
+      line-height: 50px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  // Close Button
+  .close {
+    background: rgba(255,255,255,0.2);
+    color: @white;
+    font-weight: normal;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    .opacity(0.5);
+
+    &:hover,&:focus,&:active {
+      .opacity(0.7);
+    }
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+    padding: @t3-global-padding / 2 0 0 0;
+    position: relative;
+
+    &.has-lang {
+      padding-bottom: 80px;
+      height: 100%;
+    }
+
+    // Links
+    // ------------
+    a {
+      color: @t3-off-canvas-link-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+    .dropdown-menu .active > a {
+      background: transparent;
+
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        color: @brand-primary;
+        margin: 0;
+      }
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+      > li {
+        border: 0;
+        
+        > a {
+          border-radius: 0;
+          font-size: @t3-font-size-small;
+          font-weight: @font-weight-normal;
+          padding: @t3-global-padding / 4 @t3-global-padding;
+          text-transform: uppercase;
+
+          // Desktop view
+          @media (min-width: @screen-md-min) {
+            display: inline-block;
+            padding: 0;
+            margin: @t3-global-margin / 4 @t3-global-margin;
+            .transition(padding-left 400ms);
+          }
+
+          .caret {
+            border-bottom-color: @t3-off-canvas-link-color;
+            border-top-color: @t3-off-canvas-link-color;
+            margin-left: @t3-global-margin / 4;
+          }
+
+          &:hover, &:focus, &:active {
+            // Desktop view
+            @media (min-width: @screen-md-min) {
+              color: @t3-off-canvas-link-hover-color;
+              padding-left: @t3-global-padding / 4;
+            }
+
+            .caret {
+              border-bottom-color: @t3-off-canvas-link-hover-color;
+              border-top-color: @t3-off-canvas-link-hover-color;
+            }
+          }
+        }
+
+        > span {
+          color: @t3-off-canvas-link-color;
+          display: inline-block;
+          font-weight: @font-weight-normal;
+          font-size: @t3-font-size-small;
+          padding: 0;
+          margin: @t3-global-margin / 4 @t3-global-margin;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          > a {
+            background-color: transparent;
+            color: @brand-primary;
+
+            .caret {
+              border-bottom-color: @t3-off-canvas-link-color;
+              border-top-color: @t3-off-canvas-link-color;
+            }
+          }
+        }
+      }
+    }
+
+    // Dropdown Menu
+    .dropdown-menu {
+      background-color: transparent;
+      padding: (@t3-global-padding / 4) 0 (@t3-global-padding / 4) (@t3-global-padding / 1.5);
+
+      > li {
+        > a {
+          color: @t3-off-canvas-link-color;
+          padding-top: @t3-global-padding / 4;
+          padding-bottom: @t3-global-padding / 4;
+          font-size: @t3-font-size-small;
+          .transition(margin-left 400ms);
+
+          &:hover,&:focus,&:active {
+            background-color: transparent;
+            color: @t3-off-canvas-link-hover-color;
+            margin-left: @t3-global-margin / 4;
+          }
+        }
+      }
+    }
+
+    // Dropdown Submenu
+    .dropdown-submenu > a {
+      &::after {
+        border-left-color: @t3-off-canvas-link-color;
+      }
+
+      &:hover {
+        &::after {
+          border-left-color: @t3-off-canvas-link-hover-color;
+        }
+      }
+    }
+
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: @t3-global-margin;
+      padding-bottom: 0;
+    }
+
+    .module-title  {
+      color: @gray-lightest;
+      padding: @t3-global-padding * 0.75 @t3-global-padding;
+      font-family: @font-family-sans-serif;
+      font-size: @t3-font-size-small;
+      font-weight: @font-weight-medium;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .module-ct {
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}
+
+.off-canvas-right.off-canvas-effect-4.off-canvas-open .t3-wrapper, 
+.off-canvas-right.off-canvas-effect-4.off-canvas-open .t3-mainnav-android {
+
+  @media (max-width: @screen-xs-max) {
+    transform: translate3d(-270px, 0px, 0px);
+  }
+}
+

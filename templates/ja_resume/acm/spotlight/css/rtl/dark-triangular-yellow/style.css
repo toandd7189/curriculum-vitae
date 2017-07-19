@@ -1,0 +1,34 @@
+.acm-spotlight .t3-module {
+  padding: 0;
+}
+.acm-spotlight .t3-module .container {
+  padding: 0;
+}
+.acm-spotlight .t3-module .section-title {
+  display: none;
+}
+.acm-spotlight .t3-module .section-inner {
+  padding: 0;
+}
+.acm-spotlight .t3-module .module-title {
+  font-size: 34px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+.acm-spotlight .t3-module .module-title:after {
+  display: none;
+}
+@media (min-width: 992px) {
+  .acm-spotlight .t3-module .module-title {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .acm-spotlight .t3-module .module-title {
+    font-size: 23px;
+  }
+}
+.acm-spotlight .acm-desc {
+  margin-bottom: 24px;
+}

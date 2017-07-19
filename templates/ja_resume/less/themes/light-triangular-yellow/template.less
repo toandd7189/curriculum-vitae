@@ -1,0 +1,89 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+
+// HEADER
+// ---------------------------------------------------------
+.logo-text {  
+  a {
+    background-color: transparent;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: @t3-logo-width solid @brand-primary;
+      border-left: @t3-logo-width solid transparent;
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+}
+
+
+//
+// MODULE TITLE DECOR
+// ---------------------------------------------------------
+.acm-title {
+
+  // Title Style 1
+  .title-style-1 & {
+    &::before {
+      border-left: 92px solid @brand-primary;
+      border-top: 92px solid transparent;
+      border-bottom: 92px solid transparent;
+      border-right: 0;
+      bottom: -46px;
+      left: -26px;
+
+      // Tablet view
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        left: -24px;
+      }
+    }
+
+    &::after {
+      border-left: 76px solid @body-bg;
+      border-top: 76px solid transparent;
+      border-bottom: 76px solid transparent;
+      border-right: 0;
+      bottom: -30px;
+      left: -20px;
+      position: absolute;
+      content: "";
+
+      // Tablet view
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        left: -18px;
+      }
+    }
+  }
+
+  // Title Style 2
+  .title-style-2 & {    
+    &::before {
+      border-left: 92px solid @brand-primary;
+      border-top: 92px solid transparent;
+      border-bottom: 92px solid transparent;
+      border-right: 0;
+      bottom: -46px;
+    }
+
+    &::after {
+      border-left: 76px solid @body-bg;
+      border-top: 76px solid transparent;
+      border-bottom: 76px solid transparent;
+      border-right: 0;
+      bottom: -30px;
+      right: -35px;
+      position: absolute;
+      content: "";
+    }
+  }
+}

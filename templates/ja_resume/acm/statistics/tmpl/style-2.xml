@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Statistics Style 2</title>
+	<sampledata><![CDATA[  
+		{":type":"uber:statistics","statistics":{"jatools-layout-statistics":"style-7","statistics[block-intro]":[""],"statistics[block-extra-class]":[""],"statistics[block-bg]":[""],"statistics[stats-title]":[""],"statistics[stats-description]":["We deliver specialised services for clients in every industry, all over the world."],"statistics[acm-style]":["style-light"],"statistics[full-width]":["0"],"statistics[data-style-2]":{"statistics[data-style-2][stats-count]":["43","75","100","94"],"statistics[data-style-2][stats-name]":["Responsive Web Design","HTML/CSS","PHP/MySQL","CMS"],"statistics[data-style-2][stats-color]":["#0090ff","#0090ff","#0090ff","#0090ff"],"statistics[data-style-2][stats-shadow]":["#e6e6e6","#e6e6e6","#e6e6e6","#e6e6e6"],"statistics[data-style-2][stats-bg]":["#ffffff","#ffffff","#ffffff","#ffffff"],"rows":4,"cols":6,"type":"list"}}}
+    ]]></sampledata>
+    <fields name="statistics">
+    	<fieldset name="statistics-header" label="STATISTICS_HEADER_SETTING_LABEL" description="STATISTICS_HEADER_SETTING_DESC">
+			<field name="acm-title" type="text" default="" size="40" label="ACM_TITLE_LABEL" description="ACM_TITLE_DESC" ></field>
+			<field name="acm-description" type="textarea" default="" rows="5" cols="40" label="ACM_DESCRIPTION_LABEL" description="ACM_DESCRIPTION_DESC" />
+			<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+			</field>
+
+			<field name="stats-column" type="list" label="STATISTICS_COLUMN_LABEL" description="STATISTICS_COLUMN_DESC">
+				<option value="12">6</option>
+				<option value="6">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="statistics-box" label="STATISTICS_BOX_LABEL" description="STATISTICS_BOX_DESC">
+			<field name="data-style-2" type="jalist" >
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+				<item name="stats-shadow" type="text" default="" label="STATISTICS_SHADOW_COLOR_LABEL" description="STATISTICS_SHADOW_COLOR_DESC" />
+				<item name="stats-bg" type="text" default="" label="STATISTICS_BG_COLOR_LABEL" description="STATISTICS_BG_COLOR_DESC"  />
+			</field>
+		</fieldset>
+
+    </fields>
+</form>

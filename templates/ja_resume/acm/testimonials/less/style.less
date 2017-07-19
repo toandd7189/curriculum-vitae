@@ -1,0 +1,143 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+
+.acm-testimonials {
+	text-align: center;
+	
+	// Testimonials content
+	.testimonial-text {
+		padding: 0;
+		position: relative;
+		text-align: center;
+		margin-bottom: @t3-global-margin * 2;
+		margin-top: @t3-global-margin * 2;
+
+		.quote-item {
+			top: 0;
+			width: 100%;
+			.opacity(0);
+			.transition(all 0.5s);
+
+			&.active {
+				.opacity(1);
+			}
+
+			p {
+				font-size: @font-size-h3;
+				font-family: @font-family-serif;
+				font-weight: @font-weight-500;
+				padding: 0 @t3-global-padding * 6;
+				margin: 0;
+				min-height: 115px;
+
+				// Mobile view
+				@media (max-width: @screen-sm-max) {
+					font-size: @t3-font-size-bigger;
+					padding: 0;
+				}
+			}
+
+			span {
+				color: @gray-light;
+				display: block;
+				font-size: @font-size-small;
+				font-weight: @font-weight-thin;
+				margin: (@t3-global-margin / 2) 0 0;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p,span {
+				display: none;
+			}
+
+			&.active {
+				p,span {
+					display: block;
+				}
+			}
+		}
+	}
+
+	// Testimonials Avatar
+	.author-info {
+		text-align: center;
+
+		> div {
+			display: inline-block;
+			margin: 0 @grid-gutter-width @t3-global-margin;
+			width: 25%;
+			.opacity(0.5)!important;
+			.transition(opacity 500ms);
+			.clearfix();
+
+			// Tablet/mobile view
+			@media (max-width: @screen-sm-max) {
+				text-align: center;
+			}
+
+			// Mobile view
+			@media (max-width: @screen-xs-max) {
+				margin: 0;
+				margin-bottom: @t3-global-margin;
+				width: 100%;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.active {
+				.opacity(1)!important;
+			}
+
+			img {
+				border-radius: 50%;
+				margin-right: @t3-global-margin;
+				float: left;
+
+				// Tablet/mobile view
+				@media (max-width: @screen-sm-max) {
+					float: none;
+				}
+			}
+
+			.author-detail {
+				text-align: left;
+				margin-top: 15px;
+
+				// Tablet/mobile view
+				@media (max-width: @screen-sm-max) {
+					text-align: center;
+				}
+
+				span {
+					display: block;
+
+					// Author Name
+					&.author-name {
+						color: @brand-primary;
+						font-family: @font-family-serif;
+						font-weight: @font-weight-500;
+						text-transform: uppercase;
+					}
+
+					// Author Position
+					&.author-title {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
+}
+

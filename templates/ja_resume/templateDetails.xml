@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_resume</name>
+	<version>1.0.3</version>
+	<creationDate>26 May 2017</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				<a href="//www.joomlart.com/joomla/templates/ja-resume">Responsive Joomla template for Resume & Portfolio - JA Resume</a>
+				<h4><a href="//www.joomlart.com/joomla/templates/ja-resume" title="">Home</a> | <a href="//joomlart.com/demo/#ja_resume" title="">Demo</a> | <a href="//www.joomlart.com/documentation/joomla-templates/ja-resume" title="">Document</a> | <a href="//pm.joomlart.com/browse/JATCRESUME" title="">Changelog</a></h4>
+				<p>JA Resume is responsive Joomla 3 template for Resume and Portfolio with 6 home page layouts for Developer, Blogger, Singer, Photographer, etc, social feed layout, blogs and all default Joomla template. The template supports EasyBlog and is built with robust T3 Framework and new web technologies, it is fully responsive based on Bootstrap 3 grid system. The template is SEO friendly and optimized codebase to make it perform better, the intuitive theme control panel with core features built-in will help you manage the site with ease.</p>
+				<span style="color:#FF0000">Note: JA Resume template requires T3 plugin to be installed and enabled.</span><p></p>
+				<p>Copyright 2004 - 2017 <a href='//www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>helper.php</filename>
+		<folder>acm</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_resume.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_resume.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>off-canvas</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>mast-col</position>
+		<position>before-blog</position>
+		<position>blogger-features-intro</position>
+		<position>blogger-mast-bottom</position>
+		<position>blogger-mast-top</position>
+		<position>contact-1</position>
+		<position>contact-2</position>
+		<position>features-intro</position>
+		<position>footer</position>
+		<position>frontend-features-intro</position>
+		<position>frontend-mast-top</position>
+		<position>frontenddeveloper-skill-1</position>
+		<position>frontenddeveloper-skill-2</position>
+		<position>mast-bottom</position>
+		<position>masthead</position>
+		<position>model-features-intro</position>
+		<position>model-mast-top</position>
+		<position>photographer-skill-1</position>
+		<position>photographer-skill-2</position>
+		<position>singer-features-intro</position>
+		<position>singer-mast-top</position>
+		<position>yoga-features-intro</position>
+		<position>yoga-mast-top</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<fieldset name="theme_params" label="T3_THEME_LABEL" description="T3_THEME_DESC">
+
+				<field name="theme_params_logolink" type="t3depend" function="@group">
+					<option for="logolink" value="page">
+						logolink_id
+					</option>
+				</field>
+	
+				<field name="logolink" type="list" default="default"
+							 label="T3_THEME_LOGOLINK_LABEL"
+							 description="T3_THEME_LOGOLINK_DESC">
+					<option value="default">T3_THEME_LOGOLINK_DEFAULT</option>
+					<option value="page">T3_THEME_LOGOLINK_PAGE</option>
+				</field>
+				<field name="logolink_id" type="text" default=""
+							 label="T3_THEME_LOGOLINK_ID_LABEL"
+							 description="T3_THEME_LOGOLINK_ID_DESC"/>			
+		  </fieldset>
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension">http://update.joomlart.com/service/tracking/j31/ja_resume.xml</server>
+	</updateservers>
+
+</extension>

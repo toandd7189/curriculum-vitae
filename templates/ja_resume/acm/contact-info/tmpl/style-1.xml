@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Contact Info Style 1</title>
+    <sampledata><![CDATA[
+	{":type":"uber:contact-info","contact-info":{"jatools-layout-contact-info":"style-1","contact-info[block-intro]":["Need service or support? Submit your inquiry here and we’ll find you a solution."],"contact-info[block-extra-class]":["  no-padding-bottom"],"contact-info[acm-style]":["style-light"],"contact-info[contact-info-googlemap]":[""],"contact-info[contact-info-image]":["images/joomlart/uber/map/map-1.jpg"],"contact-info[contact-info-position]":["top-left"],"contact-info[full-width]":["1"],"contact-info[contact-info-item]":{"contact-info[contact-info-item][contact-info-icon]":["fa-home","fa-phone","fa-envelope-o","fa-globe"],"contact-info[contact-info-item][contact-info-name]":["Address","Phone","Mail","Web"],"contact-info[contact-info-item][contact-info-value]":["1600 Amphitheatre Parkway, Mountain View, CA, 94043","00 1 650-253-0000","webmaster@joomlart.com","((a href=\"http://www.joomlart.com\" title=\"Joomlart\"))http://www.joomlart.com((/a))"],"rows":4,"cols":4,"type":"list"}}}
+	]]></sampledata>
+    <fields name="contact-info">
+
+        <fieldset name="contact-info-items" label="CONTACT_INFO_ITEM_LABEL" description="CONTACT_INFO_ITEM_DESC">
+            <field name="contact-info-item" type="jalist">
+                <item name="contact-info-icon" size="50" type="text" default="" label="CONTACT_FONT_AWESOME_LABEL" description="CONTACT_FONT_AWESOME_DESC" />
+                <item name="contact-info-name" type="textarea" default="" label="CONTACT_LOCALTION_NAME_LABEL" description="CONTACT_LOCALTION_NAME_DESC" requires="1" />
+                <item name="contact-info-value" type="textarea" default="" label="CONTACT_LOCALTION_VALUE_LABEL" description="CONTACT_LOCALTION_VALUE_DESC" />
+            </field>
+        </fieldset>
+
+    </fields>
+</form>

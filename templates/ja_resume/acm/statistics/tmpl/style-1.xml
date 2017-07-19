@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Statistics Style 1</title>
+	<sampledata><![CDATA[  
+		{":type":"uber:statistics","statistics":{"jatools-layout-statistics":"style-6","statistics[block-intro]":[""],"statistics[block-extra-class]":[""],"statistics[block-bg]":[""],"statistics[stats-title]":["You’re In Good Company"],"statistics[stats-description]":["Bum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut isi nim ad minim beniam."],"statistics[acm-style]":["style-light"],"statistics[full-width]":["0"],"statistics[acm-col-offset]":["col-lg-offset-0"],"statistics[data]":{"statistics[data][stats-count]":["70","80","85","90"],"statistics[data][stats-name]":["Flash","Illustration","Photoshop","Design"],"statistics[data][stats-color]":["","","",""],"rows":4,"cols":4,"type":"list"}}}
+    ]]></sampledata>
+    <fields name="statistics">
+    	<fieldset name="statistics-header" label="STATISTICS_HEADER_SETTING_LABEL" description="STATISTICS_HEADER_SETTING_DESC">
+			<field name="acm-title" type="text" default="" size="40" label="ACM_TITLE_LABEL" description="ACM_TITLE_DESC" ></field>
+			<field name="acm-description" type="textarea" default="" rows="5" cols="40" label="ACM_DESCRIPTION_LABEL" description="ACM_DESCRIPTION_DESC" />
+      
+			<field name="acm-col-offset" type="list" default="col-lg-offset-0"
+				label="ACM_COL_OFFSET_LABEL"
+				description="ACM_COL_OFFSET_DESC">
+				<option value="col-lg-offset-0">col-lg-offset-0</option>
+				<option value="col-lg-offset-1">col-lg-offset-1</option>
+				<option value="col-lg-offset-2">col-lg-offset-2</option>
+				<option value="col-lg-offset-3">col-lg-offset-3</option>
+				<option value="col-lg-offset-4">col-lg-offset-4</option>
+				<option value="col-lg-offset-5">col-lg-offset-5</option>
+				<option value="col-lg-offset-6">col-lg-offset-6</option>
+				<option value="col-lg-offset-7">col-lg-offset-7</option>
+				<option value="col-lg-offset-8">col-lg-offset-8</option>
+				<option value="col-lg-offset-9">col-lg-offset-9</option>
+				<option value="col-lg-offset-10">col-lg-offset-10</option>
+				<option value="col-lg-offset-11">col-lg-offset-11</option>
+				<option value="col-lg-offset-12">col-lg-offset-12</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="statistics-box" label="STATISTICS_BOX_LABEL" description="STATISTICS_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+			</field>
+		</fieldset>
+
+    </fields>
+</form>
